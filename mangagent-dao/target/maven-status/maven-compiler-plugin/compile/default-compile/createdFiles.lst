@@ -1,0 +1,5 @@
+org\mangagent\pojo\SysRole.class
+org\mangagent\dao\SysRoleDao.class
+org\mangagent\dao\SysUserDao.class
+org\mangagent\pojo\SysUser.class
+org\mangagent\dao\CommonDao.class
