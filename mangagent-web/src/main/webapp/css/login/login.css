@@ -7,7 +7,7 @@ ol, ul ,li{list-style: none;}
 a { text-decoration:none; cursor:pointer;}
 img {border: 0; }
 
-#web { width:970px; height:680px; background:url(../images/bg.png) no-repeat; margin:0px auto;}
+#web { width:970px; height:680px; background:url(../../images/login/bg.png) no-repeat; margin:0px auto;}
 
 
 #web .login { width:670px; height:220px; margin:0px auto; background:#F7F7F9; border:1px solid #ddd;}
@@ -19,4 +19,4 @@ img {border: 0; }
 #web .login .logmain .logdv .ipt { width:190px; height:26px; border:1px solid #ddd; padding-left:10px;}
 .more { display:block; float:right; color:#3C8DB5; margin-right:30px; color:#3C8DB5;}
 .cex { float:left; display:block; margin-top:7px; margin-right:5px;}
-.btnbg { width:203px; height:40px; background:url(../images/btnbg.png) no-repeat; text-align:center; line-height:40px; color:#FFFFFF; font-weight:bold; border:0px; cursor:pointer;}
+.btnbg { width:203px; height:40px; background:url(../../images/login/btnbg.png) no-repeat; text-align:center; line-height:40px; color:#FFFFFF; font-weight:bold; border:0px; cursor:pointer;}

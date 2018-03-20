@@ -48,4 +48,9 @@ public class UserController {
 	public String  login() throws Exception{
 		return "userLogin";
 	}
+	
+	@RequestMapping("/main")
+	public String main()throws Exception{
+		return "main";
+	}
 }
