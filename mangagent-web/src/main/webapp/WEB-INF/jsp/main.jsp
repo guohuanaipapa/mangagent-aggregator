@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<div class="easyui-accordion" data-options="border:false,fit:true"> 
 		       		<div title="用户管理">
 		       			<ul class="easyui-tree wu-side-tree">
-		       				<li iconCls="icon-tip"><a href="javascript:void(0)" data-icon="icon-tip" data-link="user/add" iframe="1">修改图书</a></li>
+		       				<li iconCls="icon-tip"><a href="javascript:void(0)" data-icon="icon-tip" data-link="" iframe="1">修改图书</a></li>
 		    
 		       			</ul>
 		       		</div>
@@ -90,8 +90,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					$('#wu-datagrid').datagrid('reload');
 				}
 			}]
-		});
-			
+		});	
 		/**
 		* Name 添加菜单选项
 		* Param title 名称
