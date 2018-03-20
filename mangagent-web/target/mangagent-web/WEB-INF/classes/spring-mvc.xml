@@ -12,6 +12,9 @@
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	
+	
 	<mvc:annotation-driven>
 		<!-- 整合FastJson插件 -->
 		<mvc:message-converters>
@@ -35,7 +38,7 @@
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 	<mvc:default-servlet-handler/>
-	<context:component-scan base-package="org.apthce.mangagent"></context:component-scan>
+	<context:component-scan base-package="org.apthce.controller"></context:component-scan>
 </beans>
 
 

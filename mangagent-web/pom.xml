@@ -60,11 +60,6 @@
 
 
 	<dependency>
-		<groupId>org.aptech.shiro.Property</groupId>
-		<artifactId>mangagent-dao</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
-	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
 		<version>4.1.6.RELEASE</version>
@@ -79,5 +74,14 @@
 		<artifactId>mangagent-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-all -->
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-all -->
+
+
+    <dependency>
+    	<groupId>org.apache.shiro</groupId>
+    	<artifactId>shiro-all</artifactId>
+    	<version>1.4.0</version>
+    </dependency>
   </dependencies>
 </project>

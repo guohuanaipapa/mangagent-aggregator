@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/user")
-public class usercontroller {
+public class UserController {
 
 	@Resource
 	private UserService userService;
@@ -33,19 +33,19 @@ public class usercontroller {
 		return "sysuser/index";
 	}
 	
-	 
 	@RequestMapping("/list")
 	@ResponseBody
 	public Map<String, Object> list(Integer page, Integer rows,@RequestParam(defaultValue="id") String sort,@RequestParam(defaultValue="asc") String order,SysUser condition) throws Exception {
 		Map<String, Object> map = new HashMap<>();
-		
 		int start = (page - 1) * rows;
 		List<SysUser> list =userService.getList(0,5,null, "id", "asc");
 		int total = userService.getCount(null);
-		
 		map.put("rows", list);
 		map.put("total", total);
-		
 		return map;
 	} 
+	@RequestMapping("/login")
+	public String  login() throws Exception{
+		return "userLogin";
+	}
 }

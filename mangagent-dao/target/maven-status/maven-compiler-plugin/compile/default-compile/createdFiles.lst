@@ -1,5 +1,7 @@
 org\mangagent\pojo\SysRole.class
-org\mangagent\dao\SysRoleDao.class
-org\mangagent\dao\SysUserDao.class
 org\mangagent\pojo\SysUser.class
 org\mangagent\dao\CommonDao.class
+org\mangagent\pojo\SysPermission.class
+org\mangagent\dao\SysPermissionDao.class
+org\mangagent\dao\SysRoleDao.class
+org\mangagent\dao\SysUserDao.class
