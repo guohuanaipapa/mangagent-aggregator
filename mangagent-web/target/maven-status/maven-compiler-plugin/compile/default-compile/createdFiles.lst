@@ -1,1 +1,2 @@
-org\apthce\controller\UserController.class
+org\apthce\shiro\CustomRealm.class
+org\apthce\shiro\MyFormFilter.class

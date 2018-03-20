@@ -24,5 +24,6 @@
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 		<property name="basePackage" value="org.mangagent.dao"></property>
 	</bean>
-	<context:component-scan base-package="org.mangagent.service"></context:component-scan>
+	<!-- dao包没有service包 -->
+	<!-- <context:component-scan base-package="org.mangagent.service"></context:component-scan> -->
 </beans>

@@ -39,8 +39,8 @@
 	
 	<!-- 自定义Realm -->
 	<bean id="userRealm" class="org.apthce.shiro.CustomRealm">
-		<property name="sysUserDao" ref="sysUserDao"></property>
-		<property name="sysPermissionDao" ref="sysPermissionDao"></property>
+		<!-- <property name="sysUserDao" ref="sysUserDao"></property>
+		<property name="sysPermissionDao" ref="sysPermissionDao"></property> -->
 		<property name="credentialsMatcher" ref="credentialMatcher"></property>
 	</bean>
 	
