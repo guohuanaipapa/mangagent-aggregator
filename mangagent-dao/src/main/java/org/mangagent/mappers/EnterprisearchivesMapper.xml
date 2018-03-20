@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mangagent.dao.EnterpriseArchivesDao">
+
+	<select id="getById" parameterType="java.lang.Integer" resultType="EnterpriseArchives">
+		SELECT `coId`,`coName`,`coBrand`,`coIntroduction`,`coType`,`englistName`,`coAddress`,`coPhone`,`postalNumber`,`faxNumber`,`coWebsite`,`email`,`leganPerson`,`registrationTime`,`registrationMoney`,`number`,`taxNumber`,`openingBank`,`bankNumber` FROM tbl_enterprisearchives
+		where coId=#{id}
+	</select>
+
+
+</mapper>
