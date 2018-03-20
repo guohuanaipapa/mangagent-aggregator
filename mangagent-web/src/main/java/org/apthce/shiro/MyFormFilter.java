@@ -13,7 +13,7 @@ public class MyFormFilter extends FormAuthenticationFilter {
 	@Override
 	protected void issueSuccessRedirect(ServletRequest request, ServletResponse response) throws Exception {
 		WebUtils.issueRedirect(request, response, getSuccessUrl(), null, true);
-	      
+	         
 	}
 }
 
