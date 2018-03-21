@@ -77,8 +77,11 @@ public class Single implements Serializable {
      * 备注
      */
     private String remarks;
-    
+    /**
+     * 单栋名称
+     */
     private String residenceName;
+ 
 
     public String getResidenceName() {
 		return residenceName;
@@ -92,7 +95,7 @@ public class Single implements Serializable {
 		return serialVersionUID;
 	}
 
-    public Integer getSingleId() {
+	public Integer getSingleId() {
         return singleId;
     }
 
@@ -221,7 +224,7 @@ public class Single implements Serializable {
 				+ ", decorationStandard=" + decorationStandard + ", lossGrade=" + lossGrade + ", buitupArea="
 				+ buitupArea + ", userArea=" + userArea + ", buildingPermits=" + buildingPermits + ", presalePermits="
 				+ presalePermits + ", completionDate=" + completionDate + ", cappingDate=" + cappingDate + ", remarks="
-				+ remarks + "]";
+				+ remarks + ", residenceName=" + residenceName + "]";
 	}
     
     

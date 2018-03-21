@@ -11,7 +11,11 @@
      
      <resultMap type="org.mangagent.pojo.Residence" id="ResidenceMap" autoMapping="true">
      		<id column="residenceId" property="residenceId"/>
+ 
      		<collection property="singles" javaType="java.util.List" ofType="org.mangagent.pojo.Single" column="residenceId"    select="org.mangagent.dao.SingleDao.getByresidenceId"></collection>
+ 
+     		<collection property="singles" javaType="java.util.List" ofType="org.mangagent.pojo.Single" column="residenceId" select="org.mangagent.dao.SingleDao.getByresidenceId"></collection>
+ 
      </resultMap>
      
      

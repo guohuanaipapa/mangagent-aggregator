@@ -12,7 +12,8 @@ public interface SingleDao extends CommonDao<Single, Integer> {
 	/**
 	 * 根据小区编号查询单元楼
 	 * @param id
-	 * @return
+	 * @return 
 	 */					
+
 	public List<Single> getByresidenceId(Integer id);
 }

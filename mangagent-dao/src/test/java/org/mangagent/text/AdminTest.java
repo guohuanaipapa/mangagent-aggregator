@@ -45,8 +45,8 @@ public class AdminTest {
 	 */
 	@Test
 	public void load() {
-		Admin admin= adminDao.checkLand("wuzhubo");
-		 System.out.println(admin);
+		/*Admin admin= adminDao.checkLand("wuzhubo");
+		 System.out.println(admin);*/
 	}
 	
 	
@@ -55,8 +55,8 @@ public class AdminTest {
 	 */
 	@Test
 	public void getEnter() {
-		EnterpriseArchives enterpriseArchives=enterpriseArchivesDao.getById(1);
-		System.out.println(enterpriseArchives);
+		/*EnterpriseArchives enterpriseArchives=enterpriseArchivesDao.getById(1);
+		System.out.println(enterpriseArchives);*/
 	}
 	
 	/**
@@ -64,11 +64,11 @@ public class AdminTest {
 	 */
 	@Test
 	public void SubList() {
-		List<SubcompanyArchives> list=subcompanyArchivesDao.getListByCondition(0, 100, null, "subName", "asc");
+		/*List<SubcompanyArchives> list=subcompanyArchivesDao.getListByCondition(0, 100, null, "subName", "asc");
 		for (SubcompanyArchives subcompanyArchives : list) {
 			System.out.println(subcompanyArchives);
 		}
-		System.out.println(subcompanyArchivesDao.getCountByCondition(null));
+		System.out.println(subcompanyArchivesDao.getCountByCondition(null));*/
 	
 	}
 	/**
@@ -76,6 +76,7 @@ public class AdminTest {
 	 */
 	@Test
 	public void ssList() {
+
 //		EnterpriseArchives enterpriseArchives=enterpriseArchivesDao.getById(1);
 //		List<SubcompanyArchives> subcompanyArchives=enterpriseArchives.getSubcompanyArchives();
 //		for (SubcompanyArchives subcompanyArchives2 : subcompanyArchives) {
@@ -95,10 +96,17 @@ public class AdminTest {
 	}
 	@Test
 	public void getSingle() {
-	    /*Residence residence=residenceDao.getById(1);
+	   /* Residence residence=residenceDao.getById(1);
 	    List<Single> singles=residence.getSingles();
 	    for (Single single : singles) {
 			System.out.println(single.getResidenceName());
+		}
+ 
+		EnterpriseArchives enterpriseArchives=enterpriseArchivesDao.getById(1);
+		List<SubcompanyArchives> subcompanyArchives=enterpriseArchives.getSubcompanyArchives();
+		for (SubcompanyArchives subcompanyArchives2 : subcompanyArchives) {
+			System.out.println(subcompanyArchives2.getPostalCode());
 		}*/
+	
 	}
 }
