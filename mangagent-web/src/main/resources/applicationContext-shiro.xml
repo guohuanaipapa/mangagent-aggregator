@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<!-- 认证提交地址，如果没有认证将会请求此地址进行认证，请求此地址将由formAuthenticationFilter进行表单认证 -->
-		<property name="loginUrl" value="/user/main"></property>
+		<property name="loginUrl" value="/admin/login"></property>
 		<property name="unauthorizedUrl" value="/refuse.jsp"></property>
 		<property name="successUrl" value="/user/main"></property>
 		<property name="securityManager" ref="securityManager"></property>
@@ -40,12 +40,16 @@
 	
 	<!-- 自定义Realm -->
 	<bean id="userRealm" class="org.apthce.shiro.CustomRealm">
+
 		<!-- <property name="sysUserDao" ref="sysUserDao"></property>
 		<property name="sysPermissionDao" ref="sysPermissionDao"></property> -->
 		  
+
 		<property name="credentialsMatcher" ref="credentialMatcher"></property>
 	</bean>
-	
+	<bean id="adminService" class="org.mangagent.service.impl.AdminServiceImpl">
+				
+	</bean>
 	<!-- 凭证匹配器 ： CredentialsMatcher -->
 	<bean id="credentialMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
 		<property name="hashAlgorithmName" value="md5"></property>
