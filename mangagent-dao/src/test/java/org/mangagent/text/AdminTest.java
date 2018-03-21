@@ -8,9 +8,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mangagent.dao.AdminDao;
 import org.mangagent.dao.EnterpriseArchivesDao;
+import org.mangagent.dao.ResidenceDao;
 import org.mangagent.dao.SubcompanyArchivesDao;
 import org.mangagent.pojo.Admin;
 import org.mangagent.pojo.EnterpriseArchives;
+import org.mangagent.pojo.Residence;
+import org.mangagent.pojo.Single;
 import org.mangagent.pojo.SubcompanyArchives;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -27,6 +30,10 @@ public class AdminTest {
 	 
 	@Resource
 	private SubcompanyArchivesDao subcompanyArchivesDao;
+	@Resource
+	private ResidenceDao residenceDao;
+	
+
 	
 	public void setAdminDao(AdminDao adminDao) {
 		this.adminDao = adminDao;
@@ -64,5 +71,34 @@ public class AdminTest {
 		System.out.println(subcompanyArchivesDao.getCountByCondition(null));
 	
 	}
-
+	/**
+	 * 子公司列表
+	 */
+	@Test
+	public void ssList() {
+		EnterpriseArchives enterpriseArchives=enterpriseArchivesDao.getById(1);
+		List<SubcompanyArchives> subcompanyArchives=enterpriseArchives.getSubcompanyArchives();
+		for (SubcompanyArchives subcompanyArchives2 : subcompanyArchives) {
+			System.out.println(subcompanyArchives2.getPostalCode());
+		}
+	
+	}
+	/**
+	 * 新增小区
+	 */
+	@Test
+	public void addresidence(){
+		Residence residence=new Residence();
+		residence.setResidenceName("飞宇花园");
+		residenceDao.add(residence);
+		System.out.println("添加成功");
+	}
+	@Test
+	public void getSingle() {
+	    Residence residence=residenceDao.getById(3);
+	    List<Single> singles=residence.getSingles();
+	    for (Single single : singles) {
+			System.out.println(single.getResidenceName());
+		}
+	}
 }

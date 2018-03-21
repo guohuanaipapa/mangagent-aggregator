@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.mangagent.dao.ResidenceDao">
-
-
+	<!-- 添加小区 -->
+     <insert id="add" parameterType="org.mangagent.pojo.Residence" keyColumn="residenceId" keyProperty="residenceId"  useGeneratedKeys="true">
+     		INSERT INTO `tbl_residence`
+     		(`subId`,`residenceName`,`areaCovered`,`builtupArea`,`greenArea`,`roadArea`,`residenceAddress`,`buildings`,`person`,`phone`,`developersId`)VALUES
+     		(#{sub.subId},#{residenceName},#{areaCovered},#{builtupArea},#{greenArea},#{roadArea},#{residenceAddress},#{buildings},#{person},#{phone},#{developers.developersId})
+     </insert>
+     <!-- 查询小区所属单元楼 -->
+     
+     <resultMap type="org.mangagent.pojo.Residence" id="ResidenceMap" autoMapping="true">
+     		<id column="residenceId" property="residenceId"/>
+     		<collection property="singles" javaType="java.util.List" ofType="org.mangagent.pojo.Single" column="residenceId" select="org.mangagent.dao.SingleDao.getByresidenceId"></collection>
+     </resultMap>
+     
+     
+     <select id="getById" parameterType="int" resultMap="ResidenceMap">
+     		SELECT * FROM `tbl_residence` WHERE `residenceId`=#{id}
+     </select>
 </mapper>
