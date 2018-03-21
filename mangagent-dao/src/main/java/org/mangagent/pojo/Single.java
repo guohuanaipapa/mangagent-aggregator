@@ -77,6 +77,20 @@ public class Single implements Serializable {
      * 备注
      */
     private String remarks;
+    
+    private String residenceName;
+
+    public String getResidenceName() {
+		return residenceName;
+	}
+
+	public void setResidenceName(String residenceName) {
+		this.residenceName = residenceName;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
     public Integer getSingleId() {
         return singleId;

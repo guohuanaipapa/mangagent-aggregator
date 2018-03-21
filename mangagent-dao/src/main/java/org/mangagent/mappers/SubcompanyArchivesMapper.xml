@@ -5,6 +5,7 @@
 	<!-- 根据条件获得分页数据 -->
 	 <select id="getListByCondition" resultType="SubcompanyArchives">
 	 	SELECT `subId`,`subName`,`subintroduction`,`subAddress`,`postalCode`,`email`,`phone`,`fax`,`openingBank`,`bankNumber`,`remarks`  FROM tbl_subcompanyarchives
+	 	
 	 	<!-- 先排序在分页 -->
 	 	order by ${column} ${orderBy}
 	 	limit #{start},#{limit}
@@ -38,7 +39,9 @@
 	 	</set>
 	 </update>
 	 
-	
-	 
+	<!-- 查询所属子公司 -->
+	 <select id="getByEnterpriseArchivesId" parameterType="int" resultType="org.mangagent.pojo.SubcompanyArchives">
+	 		SELECT * FROM `tbl_subcompanyarchives` WHERE `enterpriseArchivesId`=#{id}
+	 </select>
 	 
 </mapper>

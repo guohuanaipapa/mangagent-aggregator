@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
  <mapper namespace="org.mangagent.dao.SingleDao">
-	
+	<select id="getByresidenceId" parameterType="java.lang.Integer" resultType="org.mangagent.pojo.Single">		
+	      SELECT * FROM `tbl_single` WHERE `residenceId`=#{id}
+	</select>
 </mapper>
   

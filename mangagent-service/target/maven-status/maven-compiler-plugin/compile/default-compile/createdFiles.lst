@@ -1,0 +1,6 @@
+org\mangagent\service\EnterpriseArchivesService.class
+org\mangagent\service\impl\SubcompanyArchivesServiceImpl.class
+org\mangagent\service\SubcompanyArchivesService.class
+org\mangagent\service\impl\EnterpriseArchivesServiceImpl.class
+org\mangagent\service\AdminService.class
+org\mangagent\service\impl\AdminServiceImpl.class

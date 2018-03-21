@@ -2,6 +2,7 @@ package org.apthce.shiro;
 
 import java.util.List;
 
+import javax.annotation.Resource;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -12,14 +13,15 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-import org.mangagent.dao.AdminDao;
 import org.mangagent.pojo.Admin;
 import org.mangagent.service.AdminService;
  
 
 public class CustomRealm extends AuthorizingRealm {
    
+	@Resource
 	private AdminService adminService;
+	
 	public void setAdminService(AdminService adminService) {
 		this.adminService = adminService;
 	}
@@ -49,13 +51,15 @@ public class CustomRealm extends AuthorizingRealm {
      */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-		String principals=(String)token.getPrincipal(); //获取身份
+		 
+		String principals=(String)token.getPrincipal(); //获取身份 
 		Admin admin=adminService.land(principals);
+		 
 		
 		if(admin==null) {
 			return null;
 		}
-		System.out.println(admin.getUserName());
+		 
 		return new SimpleAuthenticationInfo(admin,admin.getPassWord(),ByteSource.Util.bytes(admin.getSalt()),this.getName());
 	}
 

@@ -2,6 +2,7 @@ package org.mangagent.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 企业表
@@ -89,8 +90,24 @@ public class EnterpriseArchives implements Serializable {
      * 银行账号
      */
     private String bankNumber;
+    /**
+     * 所属子公司
+     */
+    private List<SubcompanyArchives>  subcompanyArchives;
 
-    public Integer getCoId() {
+    public List<SubcompanyArchives> getSubcompanyArchives() {
+		return subcompanyArchives;
+	}
+
+	public void setSubcompanyArchives(List<SubcompanyArchives> subcompanyArchives) {
+		this.subcompanyArchives = subcompanyArchives;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getCoId() {
         return coId;
     }
 
