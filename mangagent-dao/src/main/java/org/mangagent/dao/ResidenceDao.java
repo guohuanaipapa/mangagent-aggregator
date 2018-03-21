@@ -7,5 +7,5 @@ import org.mangagent.pojo.Residence;
  *
  */
 public interface ResidenceDao extends CommonDao<Residence, Integer>{
-
+	
 }

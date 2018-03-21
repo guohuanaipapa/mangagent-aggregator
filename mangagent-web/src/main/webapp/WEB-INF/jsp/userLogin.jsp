@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <base href="<%=basePath%>">
 <head>
+<link href="css/login/login.css" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
@@ -17,8 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <p align="center"><img src="images/login/logzi.png" /></p>
 <p style="height:40px;"></p>
 <div class="login">
-   <div class="banner">
-   <iframe id="frame_banner" src="login/sban/banner.html" height="218" width="100%"  allowtransparency="true" title="test"  scrolling="no" frameborder="0"></iframe>
+   <div class="banner"style="background:url(../../images/login/banner1.jpg) no-repeat; margin:0px auto;">
+  
    </div>
    <div class="logmain">
       <h1>&nbsp;</h1>
