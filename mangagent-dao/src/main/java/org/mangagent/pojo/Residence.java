@@ -1,44 +1,88 @@
 package org.mangagent.pojo;
 
-public class Residence {
-    private Integer residenceId;
+import java.io.Serializable;
+import java.util.List;
 
-    private Integer subId;
-
+/**
+ *小区表
+ * @author zhubo
+ *
+ */
+public class Residence implements Serializable {
+     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * 小区编号
+	 */
+	private Integer residenceId;
+	/**
+	 * 所属子公司
+	 */
+    private SubcompanyArchives sub;
+    /**
+     * 小区名字
+     */
     private String residenceName;
-
+    /**
+     * 占地面积
+     */
     private Double areaCovered;
-
+    /**
+     * 建筑面积
+     */
     private Double builtupArea;
-
+    /**
+     * 绿地面积
+     */
     private Double greenArea;
-
+    /**
+     * 道路面积
+     */
     private Double roadArea;
-
+    /**
+     * 小区位置
+     */
     private String residenceAddress;
-
+    /**
+     * 楼宇数量
+     */
     private Integer buildings;
-
+    /**
+     * 负责人
+     */
     private String person;
-
+    /**
+     * 练习方式
+     */
     private String phone;
+    /**
+     * 开发商
+     */
+    private Developers developers;
+    
+    /**
+     * 小区下的所有楼宇集合
+     */
+    private List<Single> singles;
+     
+    public List<Single> getSingles() {
+		return singles;
+	}
 
-    private Integer developersId;
+	public void setSingles(List<Single> singles) {
+		this.singles = singles;
+	}
 
-    public Integer getResidenceId() {
+	public Integer getResidenceId() {
         return residenceId;
     }
 
     public void setResidenceId(Integer residenceId) {
         this.residenceId = residenceId;
-    }
-
-    public Integer getSubId() {
-        return subId;
-    }
-
-    public void setSubId(Integer subId) {
-        this.subId = subId;
     }
 
     public String getResidenceName() {
@@ -113,11 +157,30 @@ public class Residence {
         this.phone = phone;
     }
 
-    public Integer getDevelopersId() {
-        return developersId;
-    }
+	public SubcompanyArchives getSub() {
+		return sub;
+	}
 
-    public void setDevelopersId(Integer developersId) {
-        this.developersId = developersId;
-    }
+	public void setSub(SubcompanyArchives sub) {
+		this.sub = sub;
+	}
+
+	public Developers getDevelopers() {
+		return developers;
+	}
+
+	public void setDevelopers(Developers developers) {
+		this.developers = developers;
+	}
+
+	@Override
+	public String toString() {
+		return "Residence [residenceId=" + residenceId + ", sub=" + sub + ", residenceName=" + residenceName
+				+ ", areaCovered=" + areaCovered + ", builtupArea=" + builtupArea + ", greenArea=" + greenArea
+				+ ", roadArea=" + roadArea + ", residenceAddress=" + residenceAddress + ", buildings=" + buildings
+				+ ", person=" + person + ", phone=" + phone + ", developers=" + developers + ", singles=" + singles
+				+ "]";
+	}
+     
+    
 }

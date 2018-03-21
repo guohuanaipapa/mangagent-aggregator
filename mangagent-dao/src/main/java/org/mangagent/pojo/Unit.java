@@ -1,11 +1,34 @@
 package org.mangagent.pojo;
 
-public class Unit {
-    private Integer unitId;
+import java.io.Serializable;
+import java.util.List;
 
+/**
+ * 单元表
+ * @author zhubo
+ *
+ */
+public class Unit implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 单元编号
+	 */
+	private Integer unitId;
+	/**
+	 * 单元名
+	 */
     private String unitName;
-
-    private Integer singleId;
+    /**
+     * 单栋
+     */
+    private Single single;
+    /**
+     * 个户集合
+     */
+    private List<An> ans;
 
     public Integer getUnitId() {
         return unitId;
@@ -23,11 +46,26 @@ public class Unit {
         this.unitName = unitName;
     }
 
-    public Integer getSingleId() {
-        return singleId;
-    }
+	public Single getSingle() {
+		return single;
+	}
 
-    public void setSingleId(Integer singleId) {
-        this.singleId = singleId;
-    }
+	public void setSingle(Single single) {
+		this.single = single;
+	}
+
+	public List<An> getAns() {
+		return ans;
+	}
+
+	public void setAns(List<An> ans) {
+		this.ans = ans;
+	}
+
+	@Override
+	public String toString() {
+		return "Unit [unitId=" + unitId + ", unitName=" + unitName + ", single=" + single + ", ans=" + ans + "]";
+	}
+    
+    
 }

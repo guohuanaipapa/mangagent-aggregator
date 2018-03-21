@@ -1,6 +1,7 @@
 package org.mangagent.pojo;
 
 import java.io.Serializable;
+import java.util.List;
 /**
  * 子公司实体类
  * @author zhubo
@@ -56,7 +57,23 @@ public class SubcompanyArchives implements Serializable{
      */
     private String remarks;
 
-    public Integer getSubId() {
+    /**
+     * 该子公司下的所有的小区
+     */
+    private List<Residence> residences;
+    
+    
+    
+    
+    public List<Residence> getResidences() {
+		return residences;
+	}
+
+	public void setResidences(List<Residence> residences) {
+		this.residences = residences;
+	}
+
+	public Integer getSubId() {
         return subId;
     }
 
@@ -149,7 +166,7 @@ public class SubcompanyArchives implements Serializable{
 		return "SubcompanyArchives [subId=" + subId + ", subName=" + subName + ", subintroduction=" + subintroduction
 				+ ", subAddress=" + subAddress + ", postalCode=" + postalCode + ", email=" + email + ", phone=" + phone
 				+ ", fax=" + fax + ", openingBank=" + openingBank + ", bankNumber=" + bankNumber + ", remarks="
-				+ remarks + "]";
+				+ remarks + ", residences=" + residences + "]";
 	}
     
     

@@ -1,34 +1,81 @@
 package org.mangagent.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
-
-public class Single {
-    private Integer singleId;
-
-    private Integer residenceId;
-
+import java.util.List;
+/**
+ * 单栋类
+ * @author zhubo
+ *
+ */
+public class Single implements Serializable {
+    
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 单栋编号
+	 */
+	private Integer singleId;
+	/**
+	 * 小区编号
+	 */
+    private Residence residence;
+    
+    /**
+     *单栋层数
+     */
     private Integer singleStoreys;
-
+    /**
+     * 单元数量
+     */
     private Integer unitNumber;
-
-    private Integer structureType;
-
-    private Integer decorationStandard;
-
-    private Integer lossGrade;
-
+    
+    /**
+     * 单元集合
+     */
+    private List<Unit> units;
+    
+    /**
+     * 结构类型
+     */
+    private Dictionaries structureType;
+    /**
+     * 装修标准
+     */
+    private Dictionaries decorationStandard;
+    /**
+     * 完损等级
+     */
+    private Dictionaries lossGrade;
+    /**
+     * 建筑面积
+     */
     private Double buitupArea;
-
+    /**
+     * 使用面积
+     */
     private Double userArea;
-
+    /**
+     * 建筑许可证
+     */
     private String buildingPermits;
-
+    /**
+     * 预售许可证
+     */
     private String presalePermits;
-
+    /**
+     * 竣工日期
+     */
     private Date completionDate;
-
+    /**
+     * 封顶日期
+     */
     private Date cappingDate;
-
+    /**
+     * 备注
+     */
     private String remarks;
 
     public Integer getSingleId() {
@@ -39,19 +86,21 @@ public class Single {
         this.singleId = singleId;
     }
 
-    public Integer getResidenceId() {
-        return residenceId;
-    }
-
-    public void setResidenceId(Integer residenceId) {
-        this.residenceId = residenceId;
-    }
-
     public Integer getSingleStoreys() {
         return singleStoreys;
     }
+    
+    
 
-    public void setSingleStoreys(Integer singleStoreys) {
+    public List<Unit> getUnits() {
+		return units;
+	}
+
+	public void setUnits(List<Unit> units) {
+		this.units = units;
+	}
+
+	public void setSingleStoreys(Integer singleStoreys) {
         this.singleStoreys = singleStoreys;
     }
 
@@ -61,30 +110,6 @@ public class Single {
 
     public void setUnitNumber(Integer unitNumber) {
         this.unitNumber = unitNumber;
-    }
-
-    public Integer getStructureType() {
-        return structureType;
-    }
-
-    public void setStructureType(Integer structureType) {
-        this.structureType = structureType;
-    }
-
-    public Integer getDecorationStandard() {
-        return decorationStandard;
-    }
-
-    public void setDecorationStandard(Integer decorationStandard) {
-        this.decorationStandard = decorationStandard;
-    }
-
-    public Integer getLossGrade() {
-        return lossGrade;
-    }
-
-    public void setLossGrade(Integer lossGrade) {
-        this.lossGrade = lossGrade;
     }
 
     public Double getBuitupArea() {
@@ -142,4 +167,48 @@ public class Single {
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
+
+	public Residence getResidence() {
+		return residence;
+	}
+
+	public void setResidence(Residence residence) {
+		this.residence = residence;
+	}
+
+	public Dictionaries getStructureType() {
+		return structureType;
+	}
+
+	public void setStructureType(Dictionaries structureType) {
+		this.structureType = structureType;
+	}
+
+	public Dictionaries getDecorationStandard() {
+		return decorationStandard;
+	}
+
+	public void setDecorationStandard(Dictionaries decorationStandard) {
+		this.decorationStandard = decorationStandard;
+	}
+
+	public Dictionaries getLossGrade() {
+		return lossGrade;
+	}
+
+	public void setLossGrade(Dictionaries lossGrade) {
+		this.lossGrade = lossGrade;
+	}
+
+	@Override
+	public String toString() {
+		return "Single [singleId=" + singleId + ", residence=" + residence + ", singleStoreys=" + singleStoreys
+				+ ", unitNumber=" + unitNumber + ", units=" + units + ", structureType=" + structureType
+				+ ", decorationStandard=" + decorationStandard + ", lossGrade=" + lossGrade + ", buitupArea="
+				+ buitupArea + ", userArea=" + userArea + ", buildingPermits=" + buildingPermits + ", presalePermits="
+				+ presalePermits + ", completionDate=" + completionDate + ", cappingDate=" + cappingDate + ", remarks="
+				+ remarks + "]";
+	}
+    
+    
 }
